@@ -1,6 +1,6 @@
 {
   "name": "npm-donate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Support maintainers with a donation and help them continue with activities",
   "main": "index.js",
   "repository": "git@github.com:bukinoshita/npm-donate.git",
@@ -33,12 +33,16 @@
     "xo": "^0.18.2"
   },
   "xo": {
-    "extends": ["prettier"],
+    "extends": [
+      "prettier"
+    ],
     "rules": {
       "camelcase": 0,
       "no-return-assign": 0,
       "operator-assignment": 0
     },
-    "ignores": ["example/**/*.js"]
+    "ignores": [
+      "example/**/*.js"
+    ]
   }
 }
