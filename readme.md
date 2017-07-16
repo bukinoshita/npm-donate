@@ -43,7 +43,7 @@ Stripe API Key: [Check their API](https://stripe.com/docs/api#authentication)
 #### amount
 
 Type: `number`<br/>
-Default: `0.50` (cents — minimum)
+Default: `0.50` (cents — minimum)<br/>
 Optional
 
 Donation amount
