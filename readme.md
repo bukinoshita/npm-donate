@@ -4,7 +4,7 @@
 
 <br/>
 
-**WARNING!** Do not use in production (unless you don't care about your API Key).
+**WARNING!** BETA — Do not use in production (yet).
 
 ## Install
 ```bash
