@@ -2,6 +2,9 @@
 
 > Support maintainers with a donation and help them continue with activities
 
+<br/>
+
+**WARNING!** Do not use in production (unless you don't care about your API Key).
 
 ## Install
 ```bash
