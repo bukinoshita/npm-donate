@@ -13,10 +13,7 @@ $ npm install --save npm-donate
 ```js
 const npmDonate = require('npm-donate')
 
-const stripeApiKey = 'pk_test_Qxaxb186qemUZHpAJaMuNJrh'
-
-npmDonate(stripeApiKey, 100)
-//=> It returns an object. Check Stripe API: https://stripe.com/docs/api#charge_objec
+npmDonate('https://npm-donate.now.sh', 100)
 ```
 
 
@@ -29,16 +26,17 @@ _Check example [here](https://github.com/bukinoshita/npm-donate/tree/master/exam
 
 ## API
 
-### npmDonate(stripeApiKey, amount, googleMapsKey)
+### npmDonate(apiUrl, amount, [options])
 
 Returns a `promise`
 
-#### stripeApiKey
+#### apiUrl
 
 Type: `string`<br/>
 Required
 
-Stripe API Key: [Check their API](https://stripe.com/docs/api#authentication)
+Your API Url where it handles donations.<br/>
+Check here: [npm-donate-server](https://github.com/bukinoshita/npm-donate-server)
 
 #### amount
 
@@ -48,16 +46,35 @@ Optional
 
 Donation amount
 
-#### googleMapsKey
+#### options
+
+Type: `object`
+
+##### Google Maps Ket
 
 Type: `string`<br/>
-Optional
 
 If Google Maps API Key is set, it will lookup for user `state` and `city` using zip code.
+
+##### currency
+
+Type: `string`<br/>
+Default: `usd`
+
+3-letter ISO code for currency.<br/>
+Check supported currencies [here](https://stripe.com/docs/currencies)
+
+##### description
+
+Type: `string`<br/>
+Default: `Donation`
+
+An arbitrary string which you can attach to a Charge object. It is displayed when in the web interface alongside the charge. Note that if you use Stripe to send automatic email receipts to your customers, your receipt emails will include the description of the charge(s) that they are describing.
 
 
 ## Related
 
+- [npm-donate-server](https://github.com/bukinoshita/npm-donate-server)
 - [credit-card-prompt](https://github.com/bukinoshita/credit-card-prompt) — Credit card prompt with validation and address lookup
 
 

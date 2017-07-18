@@ -5,7 +5,11 @@ const ora = require('ora')
 
 const donate = require('./lib/donate')
 
-module.exports = (stripeApiKey, amount, googleMapsKey) => {
+module.exports = (
+  apiUrl,
+  amount,
+  { googleMapsKey, currency, description } = {}
+) => {
   return creditCardPrompt(googleMapsKey).then(res => {
     const spinner = ora('Donating...')
     const expDateParts = res.expDate.split(' / ')
@@ -17,14 +21,24 @@ module.exports = (stripeApiKey, amount, googleMapsKey) => {
       address_zip: res.zipCode,
       address_state: res.state,
       address_city: res.city,
-      address_line1: res.address1,
       exp_month: expDateParts[0],
-      exp_year: expDateParts[1]
+      exp_year: expDateParts[1],
+      object: 'card'
     }
     spinner.start()
-    return donate(stripeApiKey, card, (amount = amount * 100)).then(res => {
-      spinner.stop()
-      return res
-    })
+    return donate(
+      apiUrl,
+      card,
+      (amount = amount * 100),
+      ({ currency = currency, description = description } = {})
+    )
+      .then(res => {
+        spinner.stop()
+        return res.data
+      })
+      .catch(err => {
+        spinner.stop()
+        return err
+      })
   })
 }
