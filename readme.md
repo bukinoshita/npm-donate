@@ -72,7 +72,7 @@ An arbitrary string which you can attach to a Charge object. It is displayed whe
 
 ## Related
 
-- [npm-donate-server](https://github.com/bukinoshita/npm-donate-server)
+- [npm-donate-server](https://github.com/bukinoshita/npm-donate-server) — npm donate server to handle donations
 - [credit-card-prompt](https://github.com/bukinoshita/credit-card-prompt) — Credit card prompt with validation and address lookup
 
 
