@@ -1,6 +1,6 @@
 {
   "name": "npm-donate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Support maintainers with a donation and help them continue with activities",
   "main": "index.js",
   "repository": "git@github.com:bukinoshita/npm-donate.git",
