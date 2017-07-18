@@ -21,8 +21,6 @@ npmDonate('https://npm-donate.now.sh', 100)
 
 <img src="https://github.com/bukinoshita/credit-card-prompt/blob/master/demo.gif" width="550">
 
-_Check example [here](https://github.com/bukinoshita/npm-donate/tree/master/example)._
-
 
 ## API
 
