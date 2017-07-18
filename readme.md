@@ -48,7 +48,7 @@ Donation amount
 
 Type: `object`
 
-##### Google Maps Ket
+##### Google Maps Key
 
 Type: `string`<br/>
 
@@ -60,7 +60,7 @@ Type: `string`<br/>
 Default: `usd`
 
 3-letter ISO code for currency.<br/>
-Check supported currencies [here](https://stripe.com/docs/currencies)
+Check supported currencies [here](https://stripe.com/docs/currencies).
 
 ##### description
 
