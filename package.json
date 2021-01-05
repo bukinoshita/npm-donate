@@ -24,7 +24,7 @@
     "test": "xo --quiet"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "credit-card-prompt": "^0.0.1",
     "ora": "^1.3.0"
   },
